@@ -62,5 +62,15 @@ export class SignatureBoardComponent implements AfterViewInit {
     link.download = 'signature.png';
     link.click();
   }
-}
+  changeBackgroundColor(event: Event) {
+    const colorPicker = event.target as HTMLInputElement;
+    const selectedColor = colorPicker.value;
+    const canvas = this.canvas.nativeElement;
+    const context = canvas.getContext('2d');
 
+    if (context) {
+      context.fillStyle = selectedColor;
+      context.fillRect(0, 0, canvas.width, canvas.height);
+    }
+  }
+}
