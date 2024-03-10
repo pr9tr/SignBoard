@@ -1,5 +1,5 @@
 
-<div class="modal fade" id="featuresModal" tabindex="-1" aria-labelledby="featuresModalLabel" aria-hidden="true">
+<div class="modal fade"  id="featuresModal" tabindex="-1" aria-labelledby="featuresModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -73,9 +73,9 @@
   <header class="header">
     <h1 class="logo">Signature Board</h1>
     <nav class="navigation">
-      <a data-bs-toggle="modal" data-bs-target="#featuresModal">Features</a>
-      <a data-bs-toggle="modal" data-bs-target="#pricingModal">Pricing</a>
-      <a data-bs-toggle="modal" data-bs-target="#contactModal">Contact</a>
+      <a data-bs-toggle="modal" data-bs-target="#featuresModal" style="cursor: pointer;">Features</a>
+      <a data-bs-toggle="modal" data-bs-target="#pricingModal" style="cursor: pointer;">Pricing</a>
+      <a data-bs-toggle="modal" data-bs-target="#contactModal" style="cursor: pointer;">Contact</a>
     </nav>
   </header>
 
@@ -116,10 +116,5 @@
     </div>
   </section>
 
-  <footer class="footer">
-    <p>&copy; Made with &#x2764;&#xfe0f; By Pranav {{Year}}</p>
-    <a href="#">Privacy Policy</a>
-    <a href="#">Terms & Conditions</a>
-  </footer>
 </div>
 <app-loader *ngIf="showSpinner"></app-loader> 

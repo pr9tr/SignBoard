@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { LoaderComponent } from './loader/loader.component';
 import { HomeComponent } from './home/home.component';
 import { SignatureBoardComponent } from './signature-board/signature-board.component';
+import { FooterComponent } from './Shared/footer/footer.component';
 
 
 @NgModule({
@@ -12,7 +13,8 @@ import { SignatureBoardComponent } from './signature-board/signature-board.compo
     AppComponent,
     LoaderComponent,
     HomeComponent,
-    SignatureBoardComponent
+    SignatureBoardComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
