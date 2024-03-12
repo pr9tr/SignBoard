@@ -9,7 +9,7 @@ export class SignatureBoardComponent implements AfterViewInit {
   
   @ViewChild('canvas', { static: true }) canvas!: ElementRef<HTMLCanvasElement>;
   context!: CanvasRenderingContext2D;
-
+  penSize: number = 3;
   constructor() { }
 
   ngAfterViewInit(): void {
@@ -73,4 +73,10 @@ export class SignatureBoardComponent implements AfterViewInit {
       context.fillRect(0, 0, canvas.width, canvas.height);
     }
   }
+  changePenSize(event: Event) {
+    const penSizeSelector = event.target as HTMLSelectElement;
+    this.penSize = +penSizeSelector.value;
+    this.context.lineWidth = this.penSize;
+  }
+  
 }

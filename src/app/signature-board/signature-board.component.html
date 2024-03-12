@@ -1,18 +1,20 @@
-
 <div class="signature-container">
   <div class="chooseColor">
     <label for="background-color-picker">Select Background Color:</label>
     <input type="color" id="background-color-picker" (change)="changeBackgroundColor($event)">
-</div>
-  <canvas #canvas id="signature-pad" width="600" height="300" 
-          (mousedown)="handleMouseDown($event)"
-          (mouseup)="handleMouseUp()"
-          (mousemove)="handleMouseMove($event)">
+    <label for="pen-size" class="pen">Pen Size:</label>
+    <select id="pen-size"  (change)="changePenSize($event)">
+      <option value="1">Small</option>
+      <option value="3" selected>Medium</option>
+      <option value="5">Large</option>
+    </select>
+    
+  </div>
+  <canvas #canvas id="signature-pad" width="600" height="300" (mousedown)="handleMouseDown($event)"
+    (mouseup)="handleMouseUp()" (mousemove)="handleMouseMove($event)">
   </canvas>
   <div class="buttons">
-      <button (click)="clearCanvas()">Clear</button>
-      <button (click)="saveSignature()">Save</button>
+    <button (click)="clearCanvas()">Clear</button>
+    <button (click)="saveSignature()">Save</button>
   </div>
-
-
 </div>
